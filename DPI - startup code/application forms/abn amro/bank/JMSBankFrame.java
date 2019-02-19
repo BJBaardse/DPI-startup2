@@ -5,9 +5,7 @@ import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Properties;
+import java.util.*;
 
 import javax.jms.*;
 import javax.naming.Context;
@@ -29,7 +27,7 @@ import model.bank.*;
 import messaging.requestreply.RequestReply;
 import model.loan.LoanRequest;
 
-public class JMSBankFrame extends JFrame {
+public class JMSBankFrame extends JFrame implements Observer {
 
 	/**
 	 *
@@ -188,4 +186,16 @@ public class JMSBankFrame extends JFrame {
 		receiveMessages();
 	}
 
+	@Override
+	public void update(Observable o, Object msg) {
+		BankInterestRequest bankinterestrequest = null;
+		try {
+			bankinterestrequest = (BankInterestRequest) ((ObjectMessage) msg).getObject();
+			String correlation = ((ObjectMessage) msg).getJMSCorrelationID();
+			waitingForReply.add(new RequestReply<>(bankinterestrequest, correlation));
+			listModel.addElement(new RequestReply<>(bankinterestrequest, new BankInterestReply()));
+		} catch (JMSException e) {
+			e.printStackTrace();
+		}
+	}
 }
