@@ -23,6 +23,8 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
+import controllers.senderGateway;
+import interfaces.IsenderGateway;
 import model.bank.*;
 import messaging.requestreply.RequestReply;
 import model.loan.LoanRequest;
@@ -30,14 +32,15 @@ import model.loan.LoanRequest;
 public class JMSBankFrame extends JFrame {
 
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
+	private IsenderGateway sendergateway;
 	private JPanel contentPane;
 	private JTextField tfReply;
 	private DefaultListModel<RequestReply<BankInterestRequest, BankInterestReply>> listModel = new DefaultListModel<RequestReply<BankInterestRequest, BankInterestReply>>();
 	private List<RequestReply<BankInterestRequest, String>> waitingForReply;
-	
+
 	/**
 	 * Launch the application.
 	 */
@@ -54,43 +57,7 @@ public class JMSBankFrame extends JFrame {
 			}
 		});
 	}
-	private void SendMessage(String correlation, BankInterestReply reply){
-		Connection connection; // to connect to the ActiveMQ
-		Session session; // session for creating messages, producers and
 
-		Destination sendDestination; // reference to a queue/topic destination
-		MessageProducer producer; // for sending messages
-
-		try {
-			Properties props = new Properties();
-			props.setProperty(Context.INITIAL_CONTEXT_FACTORY,					                  "org.apache.activemq.jndi.ActiveMQInitialContextFactory");
-			props.setProperty(Context.PROVIDER_URL, "tcp://localhost:61616");
-
-			// connect to the Destination called “myFirstChannel”
-			// queue or topic: “queue.myFirstDestination” or “topic.myFirstDestination”
-			props.put(("queue.ReplyToBroker"), "ReplyToBroker");
-
-			Context jndiContext = new InitialContext(props);
-			ConnectionFactory connectionFactory = (ConnectionFactory) jndiContext
-					.lookup("ConnectionFactory");
-			connection = connectionFactory.createConnection();
-			session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
-
-			// connect to the sender destination
-			sendDestination = (Destination) jndiContext.lookup("ReplyToBroker");
-			producer = session.createProducer(sendDestination);
-
-			ObjectMessage msg = session.createObjectMessage(reply);
-			msg.setJMSCorrelationID(correlation);
-			// send the message
-			producer.send(msg);
-			System.out.println("Sending to broker");
-			System.out.println(reply.toString());
-
-		} catch (NamingException | JMSException e) {
-			e.printStackTrace();
-		}
-	}
 	private void receiveMessages(){
 		Connection connection; // to connect to the JMS
 		Session session; // session for creating consumers
@@ -146,6 +113,7 @@ public class JMSBankFrame extends JFrame {
 	 * Create the frame.
 	 */
 	public JMSBankFrame() {
+		sendergateway = new senderGateway();
 		setTitle("JMS Bank - ABN AMRO");
 
 		waitingForReply = new ArrayList<>();
@@ -160,7 +128,7 @@ public class JMSBankFrame extends JFrame {
 		gbl_contentPane.columnWeights = new double[]{1.0, 0.0, 1.0, 0.0, 0.0, Double.MIN_VALUE};
 		gbl_contentPane.rowWeights = new double[]{1.0, 0.0, Double.MIN_VALUE};
 		contentPane.setLayout(gbl_contentPane);
-		
+
 		JScrollPane scrollPane = new JScrollPane();
 		GridBagConstraints gbc_scrollPane = new GridBagConstraints();
 		gbc_scrollPane.gridwidth = 5;
@@ -169,10 +137,10 @@ public class JMSBankFrame extends JFrame {
 		gbc_scrollPane.gridx = 0;
 		gbc_scrollPane.gridy = 0;
 		contentPane.add(scrollPane, gbc_scrollPane);
-		
+
 		JList<RequestReply<BankInterestRequest, BankInterestReply>> list = new JList<RequestReply<BankInterestRequest, BankInterestReply>>(listModel);
 		scrollPane.setViewportView(list);
-		
+
 		JLabel lblNewLabel = new JLabel("type reply");
 		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
 		gbc_lblNewLabel.anchor = GridBagConstraints.EAST;
@@ -180,7 +148,7 @@ public class JMSBankFrame extends JFrame {
 		gbc_lblNewLabel.gridx = 0;
 		gbc_lblNewLabel.gridy = 1;
 		contentPane.add(lblNewLabel, gbc_lblNewLabel);
-		
+
 		tfReply = new JTextField();
 		GridBagConstraints gbc_tfReply = new GridBagConstraints();
 		gbc_tfReply.gridwidth = 2;
@@ -190,7 +158,7 @@ public class JMSBankFrame extends JFrame {
 		gbc_tfReply.gridy = 1;
 		contentPane.add(tfReply, gbc_tfReply);
 		tfReply.setColumns(10);
-		
+
 		JButton btnSendReply = new JButton("send reply");
 		btnSendReply.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -199,13 +167,13 @@ public class JMSBankFrame extends JFrame {
 				BankInterestReply reply = new BankInterestReply(interest,"ABN AMRO");
 				if (rr!= null && reply != null){
 					rr.setReply(reply);
-	                list.repaint();
+					list.repaint();
 
 					for (int i = 0; i < waitingForReply.size(); i++) {
 						System.out.println("Checking:" + i);
 						System.out.println(waitingForReply.get(i).getRequest().getAmount() + " | " + rr.getRequest().getAmount());
 						if(waitingForReply.get(i).getRequest() == rr.getRequest()){
-							SendMessage(waitingForReply.get(i).getReply(), rr.getReply());
+							sendergateway.messageSomeOne(rr.getReply(), waitingForReply.get(i).getReply(), "ReplyToBroker");
 							break;
 						}
 					}
