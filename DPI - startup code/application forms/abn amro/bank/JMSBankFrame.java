@@ -21,7 +21,9 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
+import controllers.receiverGateway;
 import controllers.senderGateway;
+import interfaces.IreceiverGateway;
 import interfaces.IsenderGateway;
 import model.bank.*;
 import messaging.requestreply.RequestReply;
@@ -38,6 +40,7 @@ public class JMSBankFrame extends JFrame implements Observer {
 	private JTextField tfReply;
 	private DefaultListModel<RequestReply<BankInterestRequest, BankInterestReply>> listModel = new DefaultListModel<RequestReply<BankInterestRequest, BankInterestReply>>();
 	private List<RequestReply<BankInterestRequest, String>> waitingForReply;
+	private receiverGateway receivergateway;
 
 	/**
 	 * Launch the application.
@@ -56,62 +59,64 @@ public class JMSBankFrame extends JFrame implements Observer {
 		});
 	}
 
-	private void receiveMessages(){
-		Connection connection; // to connect to the JMS
-		Session session; // session for creating consumers
-
-		Destination receiveDestination; //reference to a queue/topic destination
-		MessageConsumer consumer = null; // for receiving messages
-
-		try {
-			Properties props = new Properties();
-			props.setProperty(Context.INITIAL_CONTEXT_FACTORY,
-					"org.apache.activemq.jndi.ActiveMQInitialContextFactory");
-			props.setProperty(Context.PROVIDER_URL, "tcp://localhost:61616");
-
-			// connect to the Destination called “myFirstChannel”
-			// queue or topic: “queue.myFirstDestination” or
-			// “topic.myFirstDestination”
-			props.put(("queue.toBankFrameQueue"), " toBankFrameQueue");
-
-			Context jndiContext = new InitialContext(props);
-			ConnectionFactory connectionFactory = (ConnectionFactory) jndiContext
-					.lookup("ConnectionFactory");
-			connection = connectionFactory.createConnection();
-			session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
-
-			// connect to the receiver destination
-			receiveDestination = (Destination) jndiContext.lookup("toBankFrameQueue");
-			consumer = session.createConsumer(receiveDestination);
-
-			connection.start(); // this is needed to start receiving messages
-		} catch (NamingException | JMSException e) {
-			e.printStackTrace();
-		}
-		try {
-			consumer.setMessageListener(msg -> {
-				try {
-					BankInterestRequest bankinterestrequest = (BankInterestRequest)((ObjectMessage)msg).getObject();
-					String correlation = msg.getJMSCorrelationID();
-					waitingForReply.add(new RequestReply<>(bankinterestrequest, correlation));
-					listModel.addElement(new RequestReply<>(bankinterestrequest,new BankInterestReply()));
-
-				} catch (JMSException e) {
-					e.printStackTrace();
-				}
-				System.out.println("received message: " + (msg));
-			});
-
-		} catch (JMSException e) {
-			e.printStackTrace();
-		}
-
-	}
+//	private void receiveMessages(){
+//		Connection connection; // to connect to the JMS
+//		Session session; // session for creating consumers
+//
+//		Destination receiveDestination; //reference to a queue/topic destination
+//		MessageConsumer consumer = null; // for receiving messages
+//
+//		try {
+//			Properties props = new Properties();
+//			props.setProperty(Context.INITIAL_CONTEXT_FACTORY,
+//					"org.apache.activemq.jndi.ActiveMQInitialContextFactory");
+//			props.setProperty(Context.PROVIDER_URL, "tcp://localhost:61616");
+//
+//			// connect to the Destination called “myFirstChannel”
+//			// queue or topic: “queue.myFirstDestination” or
+//			// “topic.myFirstDestination”
+//			props.put(("queue.toBankFrameQueue"), " toBankFrameQueue");
+//
+//			Context jndiContext = new InitialContext(props);
+//			ConnectionFactory connectionFactory = (ConnectionFactory) jndiContext
+//					.lookup("ConnectionFactory");
+//			connection = connectionFactory.createConnection();
+//			session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
+//
+//			// connect to the receiver destination
+//			receiveDestination = (Destination) jndiContext.lookup("toBankFrameQueue");
+//			consumer = session.createConsumer(receiveDestination);
+//
+//			connection.start(); // this is needed to start receiving messages
+//		} catch (NamingException | JMSException e) {
+//			e.printStackTrace();
+//		}
+//		try {
+//			consumer.setMessageListener(msg -> {
+//				try {
+//					BankInterestRequest bankinterestrequest = (BankInterestRequest)((ObjectMessage)msg).getObject();
+//					String correlation = msg.getJMSCorrelationID();
+//					waitingForReply.add(new RequestReply<>(bankinterestrequest, correlation));
+//					listModel.addElement(new RequestReply<>(bankinterestrequest,new BankInterestReply()));
+//
+//				} catch (JMSException e) {
+//					e.printStackTrace();
+//				}
+//				System.out.println("received message: " + (msg));
+//			});
+//
+//		} catch (JMSException e) {
+//			e.printStackTrace();
+//		}
+//
+//	}
 	/**
 	 * Create the frame.
 	 */
 	public JMSBankFrame() {
-		sendergateway = new senderGateway();
+        sendergateway = new senderGateway();
+        receivergateway = new receiverGateway();
+		receivergateway.addObserver(this::update);
 		setTitle("JMS Bank - ABN AMRO");
 
 		waitingForReply = new ArrayList<>();
@@ -183,12 +188,13 @@ public class JMSBankFrame extends JFrame implements Observer {
 		gbc_btnSendReply.gridx = 4;
 		gbc_btnSendReply.gridy = 1;
 		contentPane.add(btnSendReply, gbc_btnSendReply);
-		receiveMessages();
+
 	}
 
 	@Override
 	public void update(Observable o, Object msg) {
-		BankInterestRequest bankinterestrequest = null;
+	    System.out.println("yoyo tijd");
+		BankInterestRequest bankinterestrequest;
 		try {
 			bankinterestrequest = (BankInterestRequest) ((ObjectMessage) msg).getObject();
 			String correlation = ((ObjectMessage) msg).getJMSCorrelationID();

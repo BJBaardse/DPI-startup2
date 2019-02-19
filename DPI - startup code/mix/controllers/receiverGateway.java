@@ -13,14 +13,15 @@ import javax.naming.NamingException;
 import java.util.Observable;
 import java.util.Properties;
 
-public class receiverGateway extends Observable implements IreceiverGateway {
+public class receiverGateway extends Observable {
     Connection connection; // to connect to the JMS
     Session session; // session for creating consumers
 
     Destination receiveDestination; //reference to a queue/topic destination
     MessageConsumer consumer = null; // for receiving messages
 
-    public void receiverGateway() {
+    public receiverGateway() {
+        String queue = "toBankFrameQueue";
 
         try {
             Properties props = new Properties();
@@ -31,7 +32,7 @@ public class receiverGateway extends Observable implements IreceiverGateway {
             // connect to the Destination called “myFirstChannel”
             // queue or topic: “queue.myFirstDestination” or
             // “topic.myFirstDestination”
-            props.put(("queue.toBankFrameQueue"), " toBankFrameQueue");
+            props.put(("queue." + queue), queue);
 
             Context jndiContext = new InitialContext(props);
             ConnectionFactory connectionFactory = (ConnectionFactory) jndiContext
@@ -40,7 +41,7 @@ public class receiverGateway extends Observable implements IreceiverGateway {
             session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
 
             // connect to the receiver destination
-            receiveDestination = (Destination) jndiContext.lookup("toBankFrameQueue");
+            receiveDestination = (Destination) jndiContext.lookup(queue);
             consumer = session.createConsumer(receiveDestination);
 
             connection.start(); // this is needed to start receiving messages
@@ -48,7 +49,9 @@ public class receiverGateway extends Observable implements IreceiverGateway {
             e.printStackTrace();
         }
         try {
+            System.out.println("setting listener");
             consumer.setMessageListener(msg -> {
+                    setChanged();
                     notifyObservers(msg);
                 System.out.println("received message: " + (msg));
             });
