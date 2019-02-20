@@ -1,11 +1,5 @@
 package controllers;
 
-import interfaces.IreceiverGateway;
-import interfaces.IsenderGateway;
-import messaging.requestreply.RequestReply;
-import model.bank.BankInterestReply;
-import model.bank.BankInterestRequest;
-
 import javax.jms.*;
 import javax.naming.Context;
 import javax.naming.InitialContext;

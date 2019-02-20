@@ -1,5 +1,6 @@
 package loanclient;
 
+import controllers.receiverGateway;
 import controllers.senderGateway;
 import interfaces.IsenderGateway;
 import messaging.requestreply.RequestReply;
@@ -7,19 +8,14 @@ import model.loan.LoanReply;
 import model.loan.LoanRequest;
 
 import javax.jms.*;
-import javax.naming.Context;
-import javax.naming.InitialContext;
-import javax.naming.NamingException;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Properties;
+import java.util.*;
 
-public class LoanClientFrame extends JFrame {
+public class LoanClientFrame extends JFrame implements Observer {
 
 	/**
 	 * 
@@ -34,11 +30,15 @@ public class LoanClientFrame extends JFrame {
 	private JLabel lblNewLabel_1;
 	private JTextField tfTime;
 	private IsenderGateway sendergateway;
+	private receiverGateway receivergateway;
 
 	/**
 	 * Create the frame.
 	 */
 	public LoanClientFrame() {
+		sendergateway = new senderGateway();
+		receivergateway = new receiverGateway("ReplyToClient");
+		receivergateway.addObserver(this::update);
 		setTitle("Loan Client");
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -104,7 +104,7 @@ public class LoanClientFrame extends JFrame {
 		contentPane.add(tfTime, gbc_tfTime);
 		tfTime.setColumns(10);
 
-		sendergateway = new senderGateway();
+
 		JButton btnQueue = new JButton("send loan request");
 		btnQueue.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -123,7 +123,6 @@ public class LoanClientFrame extends JFrame {
 		gbc_btnQueue.gridx = 2;
 		gbc_btnQueue.gridy = 2;
 		contentPane.add(btnQueue, gbc_btnQueue);
-		receive_replyBroker();
 		JScrollPane scrollPane = new JScrollPane();
 		GridBagConstraints gbc_scrollPane = new GridBagConstraints();
 		gbc_scrollPane.gridheight = 7;
@@ -137,70 +136,7 @@ public class LoanClientFrame extends JFrame {
 		scrollPane.setViewportView(requestReplyList);	
        
 	}
-	
-	/**
-	 * This method returns the RequestReply line that belongs to the request from requestReplyList (JList). 
-	 * You can call this method when an reply arrives in order to add this reply to the right request in requestReplyList.
-	 * @param
-	 * @return
-	 */
-	public void receive_replyBroker(){
-		Connection connection; // to connect to the JMS
-		Session session; // session for creating consumers
 
-		Destination receiveDestination; //reference to a queue/topic destination
-		MessageConsumer consumer = null; // for receiving messages
-
-		try {
-			Properties props = new Properties();
-			props.setProperty(Context.INITIAL_CONTEXT_FACTORY,
-					"org.apache.activemq.jndi.ActiveMQInitialContextFactory");
-			props.setProperty(Context.PROVIDER_URL, "tcp://localhost:61616");
-
-			// connect to the Destination called “myFirstChannel”
-			// queue or topic: “queue.myFirstDestination” or
-			// “topic.myFirstDestination”
-			props.put(("queue.ReplyToClient"), " ReplyToClient");
-
-			Context jndiContext = new InitialContext(props);
-			ConnectionFactory connectionFactory = (ConnectionFactory) jndiContext
-					.lookup("ConnectionFactory");
-			connection = connectionFactory.createConnection();
-			session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
-
-			// connect to the receiver destination
-			receiveDestination = (Destination) jndiContext.lookup("ReplyToClient");
-			consumer = session.createConsumer(receiveDestination);
-
-			connection.start(); // this is needed to start receiving messages
-		} catch (NamingException | JMSException e) {
-			e.printStackTrace();
-		}
-		try {
-			consumer.setMessageListener(msg -> {
-				try {
-					RequestReply<LoanRequest, LoanReply> rr = (RequestReply<LoanRequest, LoanReply>)((ObjectMessage)msg).getObject();
-					System.out.println("following items:" + rr.getRequest() + " | " + rr.getReply());
-					for (int i = 0; i < listModel.size(); i++) {
-						//System.out.println("Listmodel	:" + listModel.get(i).getRequest());
-						//System.out.println("rr:			:" + rr.getRequest());
-					if((listModel.get(i).getRequest().getSsn() == rr.getRequest().getSsn()) && (listModel.get(i).getRequest().getAmount() == rr.getRequest().getAmount()) && (listModel.get(i).getRequest().getTime() == rr.getRequest().getTime())){
-						System.out.println("updating fields");
-						listModel.setElementAt(rr, i);
-						break;
-					}
-					}
-
-				} catch (JMSException e) {
-					e.printStackTrace();
-				}
-				System.out.println("received message: " + (msg));
-			});
-
-		} catch (JMSException e) {
-			e.printStackTrace();
-		}
-	}
    private RequestReply<LoanRequest,LoanReply> getRequestReply(LoanRequest request){    
      
      for (int i = 0; i < listModel.getSize(); i++){
@@ -226,4 +162,25 @@ public class LoanClientFrame extends JFrame {
 			}
 		});
 	}
+
+	@Override
+	public void update(Observable o, Object msg) {
+		RequestReply<LoanRequest, LoanReply> rr = null;
+		try {
+			rr = (RequestReply<LoanRequest, LoanReply>) ((ObjectMessage) msg).getObject();
+			System.out.println("following items:" + rr.getRequest() + " | " + rr.getReply());
+			for (int i = 0; i < listModel.size(); i++) {
+				//System.out.println("Listmodel	:" + listModel.get(i).getRequest());
+				//System.out.println("rr:			:" + rr.getRequest());
+				if ((listModel.get(i).getRequest().getSsn() == rr.getRequest().getSsn()) && (listModel.get(i).getRequest().getAmount() == rr.getRequest().getAmount()) && (listModel.get(i).getRequest().getTime() == rr.getRequest().getTime())) {
+					System.out.println("updating fields");
+					listModel.setElementAt(rr, i);
+					break;
+				}
+			}
+		} catch (JMSException e) {
+			e.printStackTrace();
+		}
+	}
+
 }
