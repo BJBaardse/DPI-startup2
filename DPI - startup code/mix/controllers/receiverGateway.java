@@ -20,8 +20,7 @@ public class receiverGateway extends Observable {
     Destination receiveDestination; //reference to a queue/topic destination
     MessageConsumer consumer = null; // for receiving messages
 
-    public receiverGateway() {
-        String queue = "toBankFrameQueue";
+    public receiverGateway(String queue) {
 
         try {
             Properties props = new Properties();

@@ -115,7 +115,7 @@ public class JMSBankFrame extends JFrame implements Observer {
 	 */
 	public JMSBankFrame() {
         sendergateway = new senderGateway();
-        receivergateway = new receiverGateway();
+        receivergateway = new receiverGateway("toBankFrameQueue");
 		receivergateway.addObserver(this::update);
 		setTitle("JMS Bank - ABN AMRO");
 
