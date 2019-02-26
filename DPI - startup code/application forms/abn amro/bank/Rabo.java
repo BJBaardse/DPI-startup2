@@ -1,30 +1,25 @@
 package bank;
-import java.awt.EventQueue;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.awt.Insets;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.*;
-
-import javax.jms.*;
-import javax.swing.DefaultListModel;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JList;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTextField;
-import javax.swing.border.EmptyBorder;
 
 import controllers.receiverGateway;
 import controllers.senderGateway;
 import interfaces.IsenderGateway;
-import model.bank.*;
 import messaging.requestreply.RequestReply;
+import model.bank.BankInterestReply;
+import model.bank.BankInterestRequest;
 
-public class JMSBankFrame extends JFrame implements Observer {
+import javax.jms.JMSException;
+import javax.jms.ObjectMessage;
+import javax.swing.*;
+import javax.swing.border.EmptyBorder;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Observable;
+import java.util.Observer;
+
+public class Rabo extends JFrame implements Observer {
 
 	private static final long serialVersionUID = 1L;
 	private IsenderGateway sendergateway;
@@ -39,7 +34,7 @@ public class JMSBankFrame extends JFrame implements Observer {
 			public void run() {
 				try {
 					System.setProperty("org.apache.activemq.SERIALIZABLE_PACKAGES","*");
-					JMSBankFrame frame = new JMSBankFrame();
+					Rabo frame = new Rabo();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -49,11 +44,11 @@ public class JMSBankFrame extends JFrame implements Observer {
 	}
 
 
-	public JMSBankFrame() {
+	public Rabo() {
         sendergateway = new senderGateway();
-        receivergateway = new receiverGateway("toBankFrameQueue");
+        receivergateway = new receiverGateway("toRABO");
 		receivergateway.addObserver(this::update);
-		setTitle("JMS Bank - ABN AMRO");
+		setTitle("JMS Bank - Rabo");
 
 		waitingForReply = new ArrayList<>();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -103,7 +98,7 @@ public class JMSBankFrame extends JFrame implements Observer {
 			public void actionPerformed(ActionEvent e) {
 				RequestReply<BankInterestRequest, BankInterestReply> rr = list.getSelectedValue();
 				double interest = Double.parseDouble((tfReply.getText()));
-				BankInterestReply reply = new BankInterestReply(interest,"ABN AMRO");
+				BankInterestReply reply = new BankInterestReply(interest,"Rabo");
 				if (rr!= null && reply != null){
 					rr.setReply(reply);
 					list.repaint();

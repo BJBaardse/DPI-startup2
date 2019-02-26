@@ -18,6 +18,7 @@ import controllers.receiverGateway;
 import controllers.senderGateway;
 import interfaces.IsenderGateway;
 import messaging.requestreply.RequestReply;
+import model.Broker.BrokerObject;
 import model.bank.*;
 import model.loan.LoanReply;
 import model.loan.LoanRequest;
@@ -36,6 +37,7 @@ public class LoanBrokerFrame extends JFrame implements Observer {
 	private IsenderGateway sendergateway;
 	private receiverGateway receivergatewayreply;
 	private receiverGateway receivergatewayrequest;
+	private List<BrokerObject> registeredReturns;
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -59,6 +61,7 @@ public class LoanBrokerFrame extends JFrame implements Observer {
 		receivergatewayreply.addObserver(this::update);
 		receivergatewayrequest.addObserver(this::update);
 		sendergateway = new senderGateway();
+		registeredReturns = new ArrayList<>();
 		setTitle("Loan Broker");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -110,43 +113,80 @@ public class LoanBrokerFrame extends JFrame implements Observer {
 		}		
 	}
 
+	private void addbrokerobject(String correlation, LoanRequest request){
+		BankInterestRequest newrequest = new BankInterestRequest(request.getAmount(),request.getTime());
+		int count = 0;
+		if (request.getAmount() <= 100000 && request.getTime() <= 10) // to ING
+		{
+			count++;
+			sendergateway.messageSomeOne(newrequest, correlation, "toING");
+		}
+		if((200000 < request.getAmount()) && (request.getAmount() < 300000) && (request.getTime() <= 20))
+		{
+			count++;
+			sendergateway.messageSomeOne(newrequest, correlation, "toABN");
+		}
+		if(request.getAmount() <= 250000 && request.getTime() <=15){
+			count++;
+			sendergateway.messageSomeOne(newrequest, correlation, "toRABO");
+		}
 
+		if(count!=0){
+			System.out.println("this is the count" + count);
+			add(request);
+			registeredReturns.add(new BrokerObject(count, correlation));
+			waitingForReply.add(new RequestReply<>(request,correlation));
+		}
+		else{
+			sendergateway.messageSomeOne(new RequestReply<>(request, new LoanReply(0, "Error, no banks meet criteria")), correlation, "ReplyToClient");
+		}
+
+
+	}
 	@Override
 	public void update(Observable o, Object msg) {
 		try {
 			if (((ObjectMessage) msg).getObject() instanceof BankInterestReply) {
 				String correlation = ((ObjectMessage)msg).getJMSCorrelationID();
 				System.out.println("Received message");
-				for (int i = 0; i < waitingForReply.size(); i++) {
-					System.out.println("Checking message: " + i);
-					System.out.println("Is this ok? " + waitingForReply.get(i).getReply() + " | " + correlation);
-					if(waitingForReply.get(i).getReply().equals(correlation)){
-						System.out.println("++ Adding message: " + i);
-						BankInterestReply bankinterestreply = (BankInterestReply)((ObjectMessage)msg).getObject();
-						add(waitingForReply.get(i).getRequest(),bankinterestreply);
 
+				for(BrokerObject object : registeredReturns) {
+					if(object.getCorrelation().equals(correlation)) {
+						if(object.add((BankInterestReply) ((ObjectMessage)msg).getObject()) == true){
+							finalMessage(object.getReply(), correlation);
+							break;
+						}
+						else{
+							break;
+						}
 
-						LoanReply loanreply = new LoanReply(bankinterestreply.getInterest(), bankinterestreply.getQuoteId());
-						System.out.println("Sending:" + waitingForReply.get(i).getRequest() + "AND" + loanreply + "AND" + correlation);
-						sendergateway.messageSomeOne(new RequestReply<>(waitingForReply.get(i).getRequest(), loanreply), correlation, "ReplyToClient");
-
-						break;
 					}
 				}
 
 
 			} else if (((ObjectMessage) msg).getObject() instanceof LoanRequest) { // reply
 				LoanRequest loanrequest = (LoanRequest)((ObjectMessage)msg).getObject();
-				BankInterestRequest bankInterestRequest = new BankInterestRequest(loanrequest.getAmount(),loanrequest.getTime());
-				add(loanrequest);
 				String messageid = ((ObjectMessage)msg).getJMSMessageID();
-				waitingForReply.add(new RequestReply<>(loanrequest,messageid));
-				sendergateway.messageSomeOne(bankInterestRequest, messageid, "toBankFrameQueue");
-
+				addbrokerobject(messageid, loanrequest);
 			}
 
 		} catch (JMSException e) {
 			e.printStackTrace();
+		}
+	}
+	private void finalMessage(BankInterestReply reply, String correlation){
+		for (int i = 0; i < waitingForReply.size(); i++) {
+			System.out.println("Checking message: " + i);
+			System.out.println("Is this ok? " + waitingForReply.get(i).getReply() + " | " + correlation);
+			if(waitingForReply.get(i).getReply().equals(correlation)){
+				System.out.println("++ Adding message: " + i);
+				add(waitingForReply.get(i).getRequest(),reply);
+				LoanReply loanreply = new LoanReply(reply.getInterest(), reply.getQuoteId());
+				System.out.println("Sending:" + waitingForReply.get(i).getRequest() + "AND" + loanreply + "AND" + correlation);
+				sendergateway.messageSomeOne(new RequestReply<>(waitingForReply.get(i).getRequest(), loanreply), correlation, "ReplyToClient");
+
+				break;
+			}
 		}
 	}
 }

@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="524acacb-ae8d-46b0-b670-e6b2c996294a" name="Default Changelist" comment="jethro push2">
+    <list default="true" id="524acacb-ae8d-46b0-b670-e6b2c996294a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DPI - startup code/application forms/abn amro/bank/ABN.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DPI - startup code/application forms/abn amro/bank/Rabo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DPI - startup code/mix/model/Broker/BankInterestComp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DPI - startup code/mix/model/Broker/BrokerObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DPI - startup code/application forms/abn amro/bank/JMSBankFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/DPI - startup code/application forms/abn amro/bank/JMSBankFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DPI - startup code/application forms/abn amro/bank/JMSBankFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/DPI - startup code/application forms/abn amro/bank/ING.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DPI - startup code/application forms/loan broker/loanbroker/LoanBrokerFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/DPI - startup code/application forms/loan broker/loanbroker/LoanBrokerFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DPI - startup code/application forms/loan client/loanclient/LoanClientFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/DPI - startup code/application forms/loan client/loanclient/LoanClientFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DPI - startup code/mix/controllers/receiverGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/DPI - startup code/mix/controllers/receiverGateway.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DPI - startup code/mix/interfaces/IreceiverGateway.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/application forms/bank/JMSBankFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/application forms/bank/JMSBankFrame$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/application forms/bank/JMSBankFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/application forms/bank/JMSBankFrame$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/application forms/bank/JMSBankFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/application forms/bank/JMSBankFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/application forms/bank/JMSBankFrame$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/application forms/bank/JMSBankFrame$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/application forms/bank/JMSBankFrame.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/application forms/loanbroker/LoanBrokerFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/application forms/loanbroker/LoanBrokerFrame$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/application forms/loanbroker/LoanBrokerFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/application forms/loanbroker/LoanBrokerFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/application forms/loanclient/LoanClientFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/application forms/loanclient/LoanClientFrame$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/application forms/loanclient/LoanClientFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/application forms/loanclient/LoanClientFrame.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,11 +27,52 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DPI - startup code/application forms/loan client/loanclient/LoanClientFrame.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DPI - startup code/application forms/abn amro/bank/ABN.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-531">
-              <caret line="205" column="5" lean-forward="true" selection-start-line="205" selection-start-column="5" selection-end-line="205" selection-end-column="5" />
+            <state relative-caret-position="170">
+              <caret line="51" column="18" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DPI - startup code/application forms/abn amro/bank/ING.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="48" column="52" selection-start-line="48" selection-start-column="52" selection-end-line="48" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DPI - startup code/application forms/abn amro/bank/Rabo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="48" column="53" selection-start-line="48" selection-start-column="47" selection-end-line="48" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/model/Broker/BrokerObject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="235">
+              <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#278#279#0" expanded="true" />
+                <element signature="e#312#313#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/model/Broker/BankInterestComp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -36,31 +81,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DPI - startup code/application forms/abn amro/bank/JMSBankFrame.java">
+        <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/model/loan/LoanReply.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="26" column="60" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/Observable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="935">
-              <caret line="80" column="29" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/controllers/receiverGateway.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="204">
+              <caret line="12" column="29" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -68,7 +92,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/controllers/senderGateway.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
+            <state relative-caret-position="221">
               <caret line="23" column="85" selection-start-line="23" selection-start-column="85" selection-end-line="23" selection-end-column="85" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -77,13 +101,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/interfaces/IsenderGateway.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/messaging/requestreply/RequestReply.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="69" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="69" />
+            <state relative-caret-position="27">
+              <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#767#768#0" expanded="true" />
+                <element signature="e#788#789#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -92,15 +117,25 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DPI - startup code/application forms/loan broker/loanbroker/LoanBrokerFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="29" column="63" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="63" />
+            <state relative-caret-position="217">
+              <caret line="158" column="29" lean-forward="true" selection-start-line="158" selection-start-column="29" selection-end-line="158" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;field#serialVersionUID#0;class#LoanBrokerFrame#0" />
-                <element signature="e#9044#9864#1" />
-                <element signature="e#9258#9858#1" />
-                <element signature="e#9947#10380#1" />
+                <element signature="method#main#0;class#LoanBrokerFrame#0" />
+                <element signature="method#LoanBrokerFrame#0;class#LoanBrokerFrame#0" />
+                <element signature="e#3153#3154#0" expanded="true" />
+                <element signature="e#3212#3213#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/model/bank/BankInterestReply.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -143,17 +178,22 @@
         <option value="$PROJECT_DIR$/DPI - startup code/mix/interfaces/IsenderGateway.java" />
         <option value="$PROJECT_DIR$/DPI - startup code/mix/interfaces/IreceiverGateway.java" />
         <option value="$PROJECT_DIR$/DPI - startup code/mix/controllers/receiverGateway.java" />
-        <option value="$PROJECT_DIR$/DPI - startup code/application forms/abn amro/bank/JMSBankFrame.java" />
-        <option value="$PROJECT_DIR$/DPI - startup code/application forms/loan broker/loanbroker/LoanBrokerFrame.java" />
         <option value="$PROJECT_DIR$/DPI - startup code/application forms/loan client/loanclient/LoanClientFrame.java" />
+        <option value="$PROJECT_DIR$/DPI - startup code/mix/model/BrokerObject.java" />
+        <option value="$PROJECT_DIR$/DPI - startup code/application forms/abn amro/bank/ING.java" />
+        <option value="$PROJECT_DIR$/DPI - startup code/application forms/abn amro/bank/JMSBankFrame.java" />
+        <option value="$PROJECT_DIR$/DPI - startup code/application forms/abn amro/bank/ABN.java" />
+        <option value="$PROJECT_DIR$/DPI - startup code/application forms/abn amro/bank/Rabo.java" />
+        <option value="$PROJECT_DIR$/DPI - startup code/application forms/loan broker/loanbroker/LoanBrokerFrame.java" />
+        <option value="$PROJECT_DIR$/DPI - startup code/mix/model/Broker/BrokerObject.java" />
+        <option value="$PROJECT_DIR$/DPI - startup code/mix/model/Broker/BankInterestComp.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="140" />
-    <option name="y" value="-35" />
-    <option name="width" value="1750" />
-    <option name="height" value="980" />
+    <option name="x" value="1190" />
+    <option name="width" value="1220" />
+    <option name="height" value="655" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -161,7 +201,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -259,12 +298,20 @@
               <item name="DPI - startup code" type="462c0819:PsiDirectoryNode" />
               <item name="mix" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="Broker" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DPI startup" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DPI - startup code" type="462c0819:PsiDirectoryNode" />
+              <item name="mix" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
               <item name="loan" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -280,6 +327,9 @@
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="bank" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\beerb\OneDrive\Desktop\DPI startup\DPI - startup code\mix" />
       <recent name="C:\Users\beerb\OneDrive\Desktop\DPI startup\DPI - startup code\lib" />
@@ -298,8 +348,8 @@
     </option>
   </component>
   <component name="RunManager" selected="Compound.plebs">
-    <configuration name="JMSBankFrame" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="bank.JMSBankFrame" />
+    <configuration name="ABN" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="bank.ABN" />
       <module name="application forms" />
       <extension name="coverage">
         <pattern>
@@ -307,6 +357,13 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ING" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="bank.ING" />
+      <module name="application forms" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -337,6 +394,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RABO" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="bank.Rabo" />
+      <module name="application forms" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="CompoundRunConfigurationType">
       <toRun name="LoanBrokerFrame" type="Application" />
       <toRun name="JMSBankFrame" type="Application" />
@@ -344,13 +408,17 @@
       <method v="2" />
     </configuration>
     <configuration name="plebs" type="CompoundRunConfigurationType">
-      <toRun name="LoanBrokerFrame" type="Application" />
-      <toRun name="JMSBankFrame" type="Application" />
       <toRun name="LoanClientFrame" type="Application" />
+      <toRun name="ABN" type="Application" />
+      <toRun name="LoanBrokerFrame" type="Application" />
+      <toRun name="RABO" type="Application" />
+      <toRun name="ING" type="Application" />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.JMSBankFrame" />
+      <item itemvalue="Application.ING" />
+      <item itemvalue="Application.RABO" />
+      <item itemvalue="Application.ABN" />
       <item itemvalue="Application.LoanBrokerFrame" />
       <item itemvalue="Application.LoanClientFrame" />
       <item itemvalue="Compound.plebs" />
@@ -376,7 +444,9 @@
       <workItem from="1550237818655" duration="5978000" />
       <workItem from="1550605937040" duration="1759000" />
       <workItem from="1550612987910" duration="3350000" />
-      <workItem from="1550654913678" duration="2256000" />
+      <workItem from="1550654913678" duration="3010000" />
+      <workItem from="1550755389124" duration="1584000" />
+      <workItem from="1551210290545" duration="6419000" />
     </task>
     <task id="LOCAL-00001" summary="Sending messages works.">
       <created>1550606479348</created>
@@ -406,17 +476,24 @@
       <option name="project" value="LOCAL" />
       <updated>1550655241737</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Week 3 af">
+      <created>1550659013838</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1550659013839</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53099000" />
+    <option name="totallyTimeSpent" value="61856000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25771812" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26510066" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -463,7 +540,8 @@
     <MESSAGE value="nu wel echt werkende calls. Kijk maar" />
     <MESSAGE value="jethro push" />
     <MESSAGE value="jethro push2" />
-    <option name="LAST_COMMIT_MESSAGE" value="jethro push2" />
+    <MESSAGE value="Week 3 af" />
+    <option name="LAST_COMMIT_MESSAGE" value="Week 3 af" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -473,6 +551,12 @@
           <line>82</line>
           <properties />
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/DPI - startup code/application forms/loan broker/loanbroker/LoanBrokerFrame.java</url>
+          <line>58</line>
+          <properties />
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -517,13 +601,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/model/loan/LoanReply.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/javax/swing/DefaultListModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4233">
@@ -552,20 +629,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/model/bank/BankInterestReply.java">
+    <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/interfaces/IreceiverGateway.java" />
+    <entry file="file://$PROJECT_DIR$/DPI - startup code/application forms/loan client/loanclient/LoanClientFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/messaging/requestreply/RequestReply.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+        <state relative-caret-position="34">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
           <folding>
-            <element signature="e#767#768#0" expanded="true" />
-            <element signature="e#788#789#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -577,10 +647,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/controllers/senderGateway.java">
+    <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/controllers/receiverGateway.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="85" selection-start-line="23" selection-start-column="85" selection-end-line="23" selection-end-column="85" />
+        <state relative-caret-position="68">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -589,7 +659,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/interfaces/IsenderGateway.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
+        <state relative-caret-position="136">
           <caret line="11" column="69" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -597,50 +667,95 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/interfaces/IreceiverGateway.java">
+    <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/model/bank/BankInterestReply.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+        <state relative-caret-position="272">
+          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/controllers/receiverGateway.java">
+    <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/model/loan/LoanReply.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        <state relative-caret-position="204">
+          <caret line="12" column="29" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DPI - startup code/application forms/abn amro/bank/ING.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="48" column="52" selection-start-line="48" selection-start-column="52" selection-end-line="48" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DPI - startup code/application forms/abn amro/bank/ABN.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="51" column="18" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DPI - startup code/application forms/abn amro/bank/Rabo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="48" column="53" selection-start-line="48" selection-start-column="47" selection-end-line="48" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/model/Broker/BrokerObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#278#279#0" expanded="true" />
+            <element signature="e#312#313#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DPI - startup code/application forms/abn amro/bank/JMSBankFrame.java">
+    <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/model/Broker/BankInterestComp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="26" column="60" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="60" />
+        <state relative-caret-position="170">
+          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DPI - startup code/application forms/loan broker/loanbroker/LoanBrokerFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="29" column="63" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="63" />
+        <state relative-caret-position="217">
+          <caret line="158" column="29" lean-forward="true" selection-start-line="158" selection-start-column="29" selection-end-line="158" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;field#serialVersionUID#0;class#LoanBrokerFrame#0" />
-            <element signature="e#9044#9864#1" />
-            <element signature="e#9258#9858#1" />
-            <element signature="e#9947#10380#1" />
+            <element signature="method#main#0;class#LoanBrokerFrame#0" />
+            <element signature="method#LoanBrokerFrame#0;class#LoanBrokerFrame#0" />
+            <element signature="e#3153#3154#0" expanded="true" />
+            <element signature="e#3212#3213#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DPI - startup code/application forms/loan client/loanclient/LoanClientFrame.java">
+    <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/controllers/senderGateway.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-531">
-          <caret line="205" column="5" lean-forward="true" selection-start-line="205" selection-start-column="5" selection-end-line="205" selection-end-column="5" />
+        <state relative-caret-position="221">
+          <caret line="23" column="85" selection-start-line="23" selection-start-column="85" selection-end-line="23" selection-end-column="85" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/messaging/requestreply/RequestReply.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+          <folding>
+            <element signature="e#767#768#0" expanded="true" />
+            <element signature="e#788#789#0" expanded="true" />
           </folding>
         </state>
       </provider>
