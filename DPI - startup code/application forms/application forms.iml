@@ -6,10 +6,18 @@
       <sourceFolder url="file://$MODULE_DIR$/abn amro" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/loan broker" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/loan client" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Shell" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pomp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tankstation" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Objects" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/abn amro" />
+      <excludeFolder url="file://$MODULE_DIR$/loan broker" />
+      <excludeFolder url="file://$MODULE_DIR$/loan client" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="DPI - startup code" />
     <orderEntry type="library" name="activemq-all-5.15.8" level="project" />
+    <orderEntry type="library" name="com.fasterxml.jackson.core:jackson-databind:2.9.8" level="project" />
   </component>
 </module>
