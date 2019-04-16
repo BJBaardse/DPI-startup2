@@ -32,6 +32,7 @@ public class Tankstation implements Observer {
     private ArrayList<Pomporder> orderQueue;
     private TankstationOrder huidigeOrder;
     private String correlationLocked;
+    private ArrayList<String> pompen;
     public static void main(String[] args) {
         System.setProperty("org.apache.activemq.SERIALIZABLE_PACKAGES","*");
         JFrame frame = new JFrame("Tankstation");
@@ -52,6 +53,11 @@ public class Tankstation implements Observer {
         receivergateway.addObserver(this::update);
         tankpompen = new ArrayList();
         tankpompen.add(1);
+        pompen = new ArrayList<>();
+        pompen.add("Pomp1");
+        pompen.add("Pomp2");
+        pompen.add("Pomp3");
+
         tankbeurtToevoegenAanOrderButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -88,7 +94,9 @@ public class Tankstation implements Observer {
         //refresh prices
         System.out.println("Pushing the following:");
         System.out.println(update);
-        sendergateway.MessagePomps(update, personalID);
+        for(String pomp : pompen){
+            sendergateway.MessagePomps(update, pomp);
+        }
 
     }
     private void unlock(String correlation){
@@ -98,6 +106,8 @@ public class Tankstation implements Observer {
         if(correlation.equals(correlationLocked)){
             System.out.println("I've been unlocked");
             huidigeOrder = new TankstationOrder(this.personalID);
+            tankbeurtToevoegenAanOrderButton.setEnabled(true);
+            btnAdd.setEnabled(true);
             buttonPay.setEnabled(true);
             refresh();
         }
@@ -107,9 +117,13 @@ public class Tankstation implements Observer {
     public void update(Observable o, Object msg) {
         try {
         if (((ObjectMessage) msg).getObject() instanceof BrandstofUpdate) {
-            BrandstofUpdate update = null;
+            if(((ObjectMessage)msg).getObject().equals(brandstoffen)) {
+                System.out.println("brandstof heb ik al");
+            } else{
+                BrandstofUpdate update = null;
                 update = (BrandstofUpdate)((ObjectMessage)msg).getObject();
                 pushBrandstofPrijzen(update);
+            }
             }
         else if(((ObjectMessage) msg).getObject() instanceof Pomporder){
             System.out.println("Received pomporder");

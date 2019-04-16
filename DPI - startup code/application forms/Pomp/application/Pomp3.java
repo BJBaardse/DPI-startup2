@@ -1,7 +1,8 @@
 package application;
 
+import controllers.receiverGateway;
+import controllers.senderGateway;
 import interfaces.IsenderGateway;
-import controllers.*;
 import model.brandstoffen.Brandstof;
 import model.brandstoffen.BrandstofUpdate;
 import model.brandstoffen.Pomporder;
@@ -14,7 +15,7 @@ import java.awt.event.ActionListener;
 import java.util.Observable;
 import java.util.Observer;
 
-public class Pomp implements Observer {
+public class Pomp3 implements Observer {
     private int Pompnr;
     private String tankstation = "EersteStation";
     private JRadioButton rbBenzine;
@@ -33,16 +34,16 @@ public class Pomp implements Observer {
     public static void main(String[] args) {
         System.setProperty("org.apache.activemq.SERIALIZABLE_PACKAGES","*");
         JFrame frame = new JFrame("Pomp");
-        frame.setContentPane(new Pomp().panelPomp);
+        frame.setContentPane(new Pomp3().panelPomp);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
 
     }
-    public Pomp(){
-        receivergateway = new receiverGateway("Pomp1");
+    public Pomp3(){
+        receivergateway = new receiverGateway("Pomp3");
         receivergateway.addObserver(this::update);
-        Pompnr = 1;
+        Pompnr = 3;
         brandstoffen = new BrandstofUpdate(new Brandstof("Benzine", 160), new Brandstof("Diesel", 141), new Brandstof("Gas", 91));
         refreshBranstoffen(brandstoffen);
         sendButton.addActionListener(new ActionListener() {

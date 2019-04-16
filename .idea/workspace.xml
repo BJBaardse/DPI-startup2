@@ -1,35 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="524acacb-ae8d-46b0-b670-e6b2c996294a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/com_fasterxml_jackson_core_jackson_databind_2_9_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DPI - startup code/application forms/Pomp/application/Pomp.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DPI - startup code/application forms/Pomp/application/Pomp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DPI - startup code/application forms/Shell/application/Shell.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DPI - startup code/application forms/Shell/application/Shell.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DPI - startup code/application forms/Shell/shellController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DPI - startup code/application forms/Shell/shellInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DPI - startup code/application forms/Tankstation/application/Tankstation.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DPI - startup code/application forms/Tankstation/application/Tankstation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DPI - startup code/mix/model/brandstoffen/Brandstof.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DPI - startup code/mix/model/brandstoffen/BrandstofUpdate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DPI - startup code/mix/model/brandstoffen/Pomporder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DPI - startup code/mix/model/brandstoffen/TankstationItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DPI - startup code/mix/model/brandstoffen/TankstationOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DPI - startup code/mix/model/brandstoffen/Unlock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="524acacb-ae8d-46b0-b670-e6b2c996294a" name="Default Changelist" comment="Pomp loop added, not yet tested">
+      <change afterPath="$PROJECT_DIR$/DPI - startup code/application forms/Pomp/application/Pomp2.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DPI - startup code/application forms/Pomp/application/Pomp2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DPI - startup code/application forms/Pomp/application/Pomp3.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DPI - startup code/application forms/Pomp/application/Pomp3.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DPI - startup code/application forms/application forms.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DPI - startup code/application forms/application forms.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DPI - startup code/mix/controllers/senderGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/DPI - startup code/mix/controllers/senderGateway.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DPI - startup code/mix/interfaces/IsenderGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/DPI - startup code/mix/interfaces/IsenderGateway.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/application forms/loanbroker/JListLine.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/application forms/loanbroker/LoanBrokerFrame$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/application forms/loanbroker/LoanBrokerFrame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/application forms/loanclient/LoanClientFrame$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/application forms/loanclient/LoanClientFrame$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/application forms/loanclient/LoanClientFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DPI - startup code/application forms/Pomp/application/Pomp.java" beforeDir="false" afterPath="$PROJECT_DIR$/DPI - startup code/application forms/Pomp/application/Pomp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DPI - startup code/application forms/Shell/application/Shell.java" beforeDir="false" afterPath="$PROJECT_DIR$/DPI - startup code/application forms/Shell/application/Shell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DPI - startup code/application forms/Tankstation/application/Tankstation.java" beforeDir="false" afterPath="$PROJECT_DIR$/DPI - startup code/application forms/Tankstation/application/Tankstation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DPI - startup code/mix/model/brandstoffen/Unlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/DPI - startup code/mix/model/brandstoffen/Unlock.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,48 +31,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/model/brandstoffen/Pomporder.java">
+        <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/controllers/senderGateway.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="46" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="46" />
-              <folding>
-                <element signature="e#213#214#0" expanded="true" />
-                <element signature="e#240#241#0" expanded="true" />
-                <element signature="e#279#280#0" expanded="true" />
-                <element signature="e#311#312#0" expanded="true" />
-                <element signature="e#341#342#0" expanded="true" />
-                <element signature="e#370#371#0" expanded="true" />
-                <element signature="e#399#400#0" expanded="true" />
-                <element signature="e#427#428#0" expanded="true" />
-                <element signature="e#458#459#0" expanded="true" />
-                <element signature="e#485#486#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DPI - startup code/application forms/Tankstation/application/Tankstation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="78" column="103" lean-forward="true" selection-start-line="78" selection-start-column="103" selection-end-line="78" selection-end-column="103" />
+            <state relative-caret-position="2942">
+              <caret line="312" selection-start-line="312" selection-end-line="312" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3372#3373#0" expanded="true" />
-                <element signature="e#3428#3429#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DPI - startup code/application forms/Pomp/application/Pomp.java">
+        <entry file="file://$PROJECT_DIR$/DPI - startup code/application forms/Pomp/application/Pomp3.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="67" column="21" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="171">
+              <caret line="43" column="52" selection-start-line="43" selection-start-column="52" selection-end-line="43" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -105,21 +60,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DPI - startup code/application forms/Shell/application/Shell.form">
-          <provider selected="true" editor-type-id="ui-designer" />
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DPI - startup code/application forms/Shell/application/Shell.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="680">
+              <caret line="62" column="50" selection-start-line="62" selection-start-column="50" selection-end-line="62" selection-end-column="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DPI - startup code/application forms/Shell/application/Shell.java">
+        <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/model/brandstoffen/TankstationItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
-              <caret line="100" column="93" selection-start-line="100" selection-start-column="93" selection-end-line="100" selection-end-column="93" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1940#1941#0" expanded="true" />
-                <element signature="e#1989#1990#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="68">
+              <caret line="4" column="52" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -143,10 +100,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/interfaces/IsenderGateway.java">
+        <entry file="file://$PROJECT_DIR$/DPI - startup code/application forms/Tankstation/application/Tankstation.form">
+          <provider selected="true" editor-type-id="ui-designer" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DPI - startup code/application forms/Tankstation/application/Tankstation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+            <state relative-caret-position="545">
+              <caret line="98" column="9" selection-start-line="98" selection-start-column="9" selection-end-line="98" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -155,24 +117,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/controllers/senderGateway.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="704">
-              <caret line="298" column="41" lean-forward="true" selection-start-line="298" selection-start-column="41" selection-end-line="298" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/DPI - startup code/application forms/Pomp/application/Pomp3.form">
+          <provider selected="true" editor-type-id="ui-designer" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/model/brandstoffen/Unlock.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/DPI - startup code/application forms/Pomp/application/Pomp.form">
+          <provider selected="true" editor-type-id="ui-designer" />
         </entry>
       </file>
     </leaf>
@@ -192,6 +143,10 @@
       <find>ID:DESKTOP-H69F8AD-60684-1549622922725-3:1:1:1:1</find>
       <find>System.setProperty(&quot;org.apache.activemq.SERIALIZABLE_PACKAGES&quot;,&quot;*&quot;);</find>
       <find>sendergate</find>
+      <find>Pushing the following:</find>
+      <find>52e5e421-07bb-4a46-9d1f-8ab67e48281d | EersteStation</find>
+      <find>Pushing the following</find>
+      <find>DESKTOP-H69F8AD-55798-1554966359194-11:1:1:1:1</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -200,11 +155,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/DPI - startup code/mix/model/loan/LoanRequest.java" />
-        <option value="$PROJECT_DIR$/DPI - startup code/mix/messaging/requestreply/RequestReply.java" />
-        <option value="$PROJECT_DIR$/DPI - startup code/mix/model/loan/LoanReply.java" />
-        <option value="$PROJECT_DIR$/DPI - startup code/application forms/controllers/receiverGateway.java" />
-        <option value="$PROJECT_DIR$/DPI - startup code/application forms/interfaces/IreceiverGateway.java" />
         <option value="$PROJECT_DIR$/DPI - startup code/application forms/interfaces/IsenderGateway.java" />
         <option value="$PROJECT_DIR$/DPI - startup code/application forms/controllers/senderGateway.java" />
         <option value="$PROJECT_DIR$/DPI - startup code/mix/interfaces/IreceiverGateway.java" />
@@ -243,13 +193,18 @@
         <option value="$PROJECT_DIR$/DPI - startup code/application forms/Pomp/application/Pomp.form" />
         <option value="$PROJECT_DIR$/DPI - startup code/mix/model/brandstoffen/Pomporder.java" />
         <option value="$PROJECT_DIR$/DPI - startup code/application forms/Tankstation/application/Tankstation.form" />
-        <option value="$PROJECT_DIR$/DPI - startup code/application forms/Pomp/application/Pomp.java" />
         <option value="$PROJECT_DIR$/DPI - startup code/mix/model/brandstoffen/TankstationOrder.java" />
         <option value="$PROJECT_DIR$/DPI - startup code/mix/interfaces/IsenderGateway.java" />
         <option value="$PROJECT_DIR$/DPI - startup code/mix/model/brandstoffen/TankstationItem.java" />
-        <option value="$PROJECT_DIR$/DPI - startup code/mix/model/brandstoffen/Unlock.java" />
         <option value="$PROJECT_DIR$/DPI - startup code/mix/controllers/senderGateway.java" />
+        <option value="$PROJECT_DIR$/DPI - startup code/mix/model/brandstoffen/Unlock.java" />
         <option value="$PROJECT_DIR$/DPI - startup code/application forms/Shell/application/Shell.java" />
+        <option value="$PROJECT_DIR$/DPI - startup code/application forms/Pomp/application/pomp2.java" />
+        <option value="$PROJECT_DIR$/DPI - startup code/application forms/Pomp/application/Pomp2.form" />
+        <option value="$PROJECT_DIR$/DPI - startup code/application forms/Pomp/application/Pomp3.form" />
+        <option value="$PROJECT_DIR$/DPI - startup code/application forms/Pomp/application/Pomp.java" />
+        <option value="$PROJECT_DIR$/DPI - startup code/application forms/Pomp/application/Pomp2.java" />
+        <option value="$PROJECT_DIR$/DPI - startup code/application forms/Pomp/application/Pomp3.java" />
         <option value="$PROJECT_DIR$/DPI - startup code/application forms/Tankstation/application/Tankstation.java" />
       </list>
     </option>
@@ -298,7 +253,7 @@
               <item name="application forms" type="462c0819:PsiDirectoryNode" />
               <item name="Pomp" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="Pomp" type="e9f4de52:FormNode" />
+              <item name="Pomp3" type="e9f4de52:FormNode" />
             </path>
             <path>
               <item name="DPI startup" type="b2602c69:ProjectViewProjectNode" />
@@ -407,7 +362,11 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\beerb\OneDrive\Desktop\DPI startup\DPI - startup code\application forms\Pomp\application" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="application" />
       <recent name="bank" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -430,76 +389,44 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Compound.tankapp">
-    <configuration name="ABN" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="bank.ABN" />
-      <module name="application forms" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="bank.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ING" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="bank.ING" />
-      <module name="application forms" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoanBrokerFrame" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="loanbroker.LoanBrokerFrame" />
-      <module name="application forms" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="loanbroker.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoanClientFrame" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="loanclient.LoanClientFrame" />
-      <module name="application forms" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value=".*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Pomp" type="Application" factoryName="Application">
+  <component name="RunManager" selected="Application.Shell (1)">
+    <configuration name="Pomp1" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="application.Pomp" />
       <module name="application forms" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RABO" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="bank.Rabo" />
+    <configuration name="Pomp2" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="application.Pomp2" />
       <module name="application forms" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Shell" type="Application" factoryName="Application" nameIsGenerated="true">
+    <configuration name="Pomp3" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="application.Pomp3" />
+      <module name="application forms" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Shell (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="application.Shell" />
       <module name="application forms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Shell.*" />
+          <option name="PATTERN" value="application.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Shell" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="application.Shell" />
+      <module name="DPI - startup code" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -507,12 +434,6 @@
     <configuration name="Tankstation" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="application.Tankstation" />
       <module name="application forms" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value=".*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -522,6 +443,13 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="Pomps" type="CompoundRunConfigurationType">
+      <toRun name="Pomp3" type="Application" />
+      <toRun name="Pomp1" type="Application" />
+      <toRun name="Tankstation" type="Application" />
+      <toRun name="Pomp2" type="Application" />
+      <method v="2" />
     </configuration>
     <configuration name="Unnamed" type="CompoundRunConfigurationType">
       <toRun name="Shell" type="Application" />
@@ -530,9 +458,10 @@
       <method v="2" />
     </configuration>
     <configuration default="true" type="CompoundRunConfigurationType">
-      <toRun name="Shell" type="Application" />
-      <toRun name="Pomp" type="Application" />
+      <toRun name="Pomp3" type="Application" />
+      <toRun name="Pomp1" type="Application" />
       <toRun name="Tankstation" type="Application" />
+      <toRun name="Pomp2" type="Application" />
       <method v="2" />
     </configuration>
     <configuration name="plebs" type="CompoundRunConfigurationType">
@@ -550,18 +479,22 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.ING" />
-      <item itemvalue="Application.RABO" />
-      <item itemvalue="Application.ABN" />
-      <item itemvalue="Application.LoanBrokerFrame" />
-      <item itemvalue="Application.LoanClientFrame" />
-      <item itemvalue="Application.Pomp" />
+      <item itemvalue="Application.Pomp1" />
+      <item itemvalue="Application.Pomp2" />
+      <item itemvalue="Application.Pomp3" />
       <item itemvalue="Application.Tankstation" />
       <item itemvalue="Application.Shell" />
+      <item itemvalue="Application.Shell (1)" />
       <item itemvalue="Compound.Unnamed" />
       <item itemvalue="Compound.tankapp" />
+      <item itemvalue="Compound.Pomps" />
       <item itemvalue="Compound.plebs" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Shell (1)" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -604,7 +537,12 @@
       <workItem from="1554373862309" duration="609000" />
       <workItem from="1554758851643" duration="269000" />
       <workItem from="1554815852315" duration="208000" />
-      <workItem from="1554840918092" duration="3348000" />
+      <workItem from="1554840918092" duration="4246000" />
+      <workItem from="1554924689916" duration="6066000" />
+      <workItem from="1554966157386" duration="1484000" />
+      <workItem from="1555271406147" duration="3065000" />
+      <workItem from="1555343554138" duration="617000" />
+      <workItem from="1555423805383" duration="1608000" />
     </task>
     <task id="LOCAL-00001" summary="Sending messages works.">
       <created>1550606479348</created>
@@ -648,23 +586,30 @@
       <option name="project" value="LOCAL" />
       <updated>1551217691723</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="week 4 af">
+      <created>1554845070600</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1554845070600</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109475000" />
+    <option name="totallyTimeSpent" value="123213000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21055438" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22121535" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32960895" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3290461" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.35369775" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -737,7 +682,8 @@
     <MESSAGE value="jethro push2" />
     <MESSAGE value="Week 3 af" />
     <MESSAGE value="week 4 af" />
-    <option name="LAST_COMMIT_MESSAGE" value="week 4 af" />
+    <MESSAGE value="Pomp loop added, not yet tested" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pomp loop added, not yet tested" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -758,59 +704,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/model/bank/BankInterestRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="58" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/interfaces/IreceiverGateway.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/Observable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="80" column="29" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/model/Broker/BrokerObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/model/Broker/BankInterestComp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/model/loan/LoanReply.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="29" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/messaging/requestreply/RequestReply.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
-          <folding>
-            <element signature="e#767#768#0" expanded="true" />
-            <element signature="e#788#789#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/model/bank/BankInterestReply.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -889,9 +782,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DPI - startup code/application forms/Pomp/application/Pomp.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/DPI - startup code/application forms/Shell/shellController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -906,33 +796,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/controllers/receiverGateway.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/model/brandstoffen/Brandstof.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/model/brandstoffen/TankstationItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="52" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
-          <folding>
-            <element signature="e#88#89#0" expanded="true" />
-            <element signature="e#115#116#0" expanded="true" />
-            <element signature="e#144#145#0" expanded="true" />
-            <element signature="e#172#173#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -948,29 +815,16 @@
     <entry file="file://$PROJECT_DIR$/02 04 2019 _ 23 27 37 Tankbon.json" />
     <entry file="file://$PROJECT_DIR$/02 04 2019 _ 23 46 12 Tankbon.json" />
     <entry file="file://$PROJECT_DIR$/03 04 2019 _ 10 35 07 Tankbon.json" />
-    <entry file="file://$PROJECT_DIR$/09 04 2019 _ 15 19 04 Tankbon.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DPI - startup code/application forms/Tankstation/application/Tankstation.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/08 04 2019 _ 23 30 20 Tankbon.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/09 04 2019 _ 15 19 04 Tankbon.json" />
+    <entry file="file://$PROJECT_DIR$/08 04 2019 _ 23 30 20 Tankbon.json" />
     <entry file="file://$PROJECT_DIR$/DPI - startup code/application forms/Shell/application/Shell.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/model/brandstoffen/Unlock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/10 04 2019 _ 21 54 01 Tankbon.json" />
     <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/model/brandstoffen/Pomporder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="46" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="46" />
+        <state relative-caret-position="255">
+          <caret line="36" column="11" lean-forward="true" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="11" />
           <folding>
             <element signature="e#213#214#0" expanded="true" />
             <element signature="e#240#241#0" expanded="true" />
@@ -986,10 +840,78 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/interfaces/IsenderGateway.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/11 04 2019 _ 09 16 18 Tankbon.json" />
+    <entry file="file://$PROJECT_DIR$/DPI - startup code/application forms/Pomp/application/Pomp2.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/controllers/receiverGateway.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/08 04 2019 _ 23 31 34 Tankbon.json" />
     <entry file="file://$PROJECT_DIR$/DPI - startup code/application forms/Pomp/application/Pomp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="67" column="21" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="21" />
+        <state relative-caret-position="510">
+          <caret line="42" column="53" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DPI - startup code/application forms/Pomp/application/Pomp2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="43" column="52" selection-start-line="43" selection-start-column="52" selection-end-line="43" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/model/brandstoffen/Unlock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DPI - startup code/application forms/Pomp/application/Pomp.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DPI - startup code/application forms/Tankstation/application/Tankstation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="98" column="9" selection-start-line="98" selection-start-column="9" selection-end-line="98" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DPI - startup code/application forms/Pomp/application/Pomp3.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DPI - startup code/application forms/Tankstation/application/Tankstation.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/controllers/senderGateway.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2942">
+          <caret line="312" selection-start-line="312" selection-end-line="312" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1003,25 +925,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/interfaces/IsenderGateway.java">
+    <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/model/brandstoffen/TankstationItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DPI - startup code/application forms/Shell/application/Shell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="100" column="93" selection-start-line="100" selection-start-column="93" selection-end-line="100" selection-end-column="93" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1940#1941#0" expanded="true" />
-            <element signature="e#1989#1990#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="68">
+          <caret line="4" column="52" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -1041,24 +948,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DPI - startup code/mix/controllers/senderGateway.java">
+    <entry file="file://$PROJECT_DIR$/DPI - startup code/application forms/Pomp/application/Pomp3.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="298" column="41" lean-forward="true" selection-start-line="298" selection-start-column="41" selection-end-line="298" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="171">
+          <caret line="43" column="52" selection-start-line="43" selection-start-column="52" selection-end-line="43" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DPI - startup code/application forms/Tankstation/application/Tankstation.java">
+    <entry file="file://$PROJECT_DIR$/DPI - startup code/application forms/Shell/application/Shell.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="78" column="103" lean-forward="true" selection-start-line="78" selection-start-column="103" selection-end-line="78" selection-end-column="103" />
+        <state relative-caret-position="680">
+          <caret line="62" column="50" selection-start-line="62" selection-start-column="50" selection-end-line="62" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3372#3373#0" expanded="true" />
-            <element signature="e#3428#3429#0" expanded="true" />
           </folding>
         </state>
       </provider>

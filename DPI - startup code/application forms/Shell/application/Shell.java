@@ -20,6 +20,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Observable;
 import java.util.Observer;
+import java.util.concurrent.TimeUnit;
 
 public class Shell implements Observer {
     SpinnerNumberModel model = new SpinnerNumberModel(0.0, -1000.0, 1000.0, 0.01);
@@ -88,9 +89,12 @@ public class Shell implements Observer {
             return false;
         }
     }
-    public void finnishbonnetje(String lockedID, String queue){
+    public void finnishbonnetje(String lockedID, String queue) throws InterruptedException {
         System.out.println("Unlocking:" + lockedID + " | " + queue);
+        TimeUnit.SECONDS.sleep(3);
+        System.out.println("Unlocking delay applied");
         sendergateway.unlockstation(lockedID, queue);
+        System.out.println("Unlock send!");
     }
     @Override
     public void update(Observable o, Object arg) {
@@ -100,7 +104,7 @@ public class Shell implements Observer {
                 writeBonnetje(order);
                 finnishbonnetje(((ObjectMessage)arg).getJMSCorrelationID(), order.getPompid());
             }
-        } catch (JMSException e) {
+        } catch (JMSException | InterruptedException e) {
             e.printStackTrace();
         }
     }
